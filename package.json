@@ -15,9 +15,10 @@
     "lib"
   ],
   "scripts": {
-    "build": "rm -rf lib/ && yarn build:types && yarn build:code",
+    "build": "rm -rf lib/ && yarn build:types && yarn build:code && yarn build:webpack",
     "build:code": "babel src --out-dir lib --ignore '**/*.test.ts' --extensions '.ts' && find ./lib -name '*.test.d.ts' -delete && cp src/english.json lib/",
     "build:types": "tsc --emitDeclarationOnly --declaration --isolatedModules false --declarationDir lib",
+    "build:webpack": "webpack --config webpack.config.js",
     "coverage": "yarn test --coverage",
     "lint": "yarn lint:ci --fix",
     "lint:ci": "eslint . --ext .js,.ts,.json",
