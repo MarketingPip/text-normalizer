@@ -8,7 +8,6 @@
     "email": "dmytro.harazdovskyi@shelf.io",
     "url": "https://shelf.io"
   },
-  "type": "module",
   "main": "lib",
   "types": "lib/index.d.ts",
   "files": [
