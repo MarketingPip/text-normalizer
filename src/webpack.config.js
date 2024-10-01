@@ -58,7 +58,7 @@ module.exports = {
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, '..', 'dist'),
-    filename: packageData.FILENAME,
+    filename: "index.ts",
     library: {
       type: 'module',
     },
