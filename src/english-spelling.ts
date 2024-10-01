@@ -1,12 +1,12 @@
 import path from 'path';
 import fs from 'fs';
-
+import mappingPath from '../englishMapping.json'; // Adjust the path as needed
 export class EnglishSpellingNormalizer {
   private mapping: {[key: string]: string};
 
   constructor() {
-    const mappingPath = path.join(__dirname, 'english.json');
-    this.mapping = JSON.parse(fs.readFileSync(mappingPath, 'utf-8'));
+     
+    this.mapping = JSON.parse(mappingPath);
   }
 
   normalize(s: string): string {
